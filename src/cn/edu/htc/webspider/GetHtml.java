@@ -44,7 +44,7 @@ public class GetHtml {
         CloseableHttpClient httpClient = HttpClients.custom().setDefaultCookieSpecRegistry(r).setDefaultRequestConfig(requestConfig).build();
         HttpGet httpGet =new HttpGet(url);
         httpGet.setConfig(requestConfig);
-        String html = "ªÒ»° ß∞‹";
+        String html = "Ëé∑ÂèñÂ§±Ë¥•";
         try {
         	CloseableHttpResponse reponse = httpClient.execute(httpGet);
         	html = EntityUtils.toString(reponse.getEntity());
@@ -67,7 +67,7 @@ public class GetHtml {
 		GetHtml test = new GetHtml();
 		String html = test.getHTML("https://rm93.com/thread.php?fid=53");
 		String savePath = "C:\\Users\\starim\\eclipse-workspace\\javaWebSpider\\test.txt";
-		if(html!="ªÒ»° ß∞‹") {
+		if(html!="Ëé∑ÂèñÂ§±Ë¥•") {
 			test.writeWebTxt(html, savePath);
 		}
 	}
